@@ -1,0 +1,797 @@
+-- sub to halal gaming for more leaked scripts!!!!!!!
+local R = game.Players.LocalPlayer;
+local b = game:GetService("RunService");
+local u = game:GetService('ReplicatedStorage');
+local x = u.MainEvent;
+local v = b.Heartbeat;
+local function r(xz)
+	return R:Kick(xz);
+end;
+do
+	local AK = nil;
+	AK = hookfunction(x.FireServer, newcclosure(function(oc, ...)
+		local Cc = {
+			...
+		};
+		if Cc[1] == "CHECKER_1" or Cc[1] == "TeleportDetect" or Cc[1] == "OneMoreTime" then
+			return nil;
+		end;
+		return AK(oc, ...);
+	end));
+	v:Connect(function()
+		local xo = R.Character and R.Character.PrimaryPart;
+		if xo then
+			for CX, kX in pairs(getconnections(xo:GetPropertyChangedSignal("CFrame"))) do
+				kX:Disable();
+			end;
+		end;
+	end);
+	local function tK(kA)
+		while true do
+			if not kA then
+				return;
+			end;
+			v:Wait();
+			for i8, v8 in pairs(kA:GetChildren()) do
+				if v8:IsA("Script") and v8:FindFirstChildOfClass("LocalScript") then
+					v8:FindFirstChildOfClass("LocalScript").Source = "Cleared by Lua";
+					return;
+				end;
+			end;
+		end;
+	end;
+	if R.Character then
+		tK(R.Character);
+	end;
+	R.CharacterAdded:Connect(tK);
+end;
+local N = 'https://raw.githubusercontent.com/wally-rblx/LinoriaLib/main/';
+local F = loadstring(game:HttpGet(N .. 'Library.lua'))();
+local o = loadstring(game:HttpGet(N .. 'addons/ThemeManager.lua'))();
+local z = loadstring(game:HttpGet(N .. 'addons/SaveManager.lua'))();
+local j = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
+local p = j.Notify;
+local B = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))();
+local f = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))();
+local m = loadstring(game:HttpGet("https://pastebin.com/raw/Avdzc0TJ", true))();
+local I = loadstring(game:HttpGet("https://pastebin.com/raw/PVWdpiVq"))();
+local I = loadstring(game:HttpGet("https://pastebin.com/raw/U2HwmEyF"))();
+local d = loadstring(game:HttpGet("https://kiriot22.com/releases/ESP.lua"))();
+local e = setmetatable({}, {
+	__index = function(ar, Or)
+		return game:GetService(Or);
+	end
+});
+local H = e.Players.LocalPlayer;
+do
+	d:Toggle(false);
+	d.FaceCamera = true;
+	d.TeamMates = false;
+	d.Names = false;
+	d.Tracers = false;
+	d.Boxes = false;
+	function d.Overrides.IsTeamMate(Wv)
+		if Wv.Character and H.Character then
+			return (Wv.Character.Parent == H.Character.Parent);
+		end;
+	end;
+	function d.Overrides.GetColor(lU)
+		local xU = d:GetPlrFromChar(lU);
+		if xU then
+			local pm = d:IsTeamMate(xU);
+			if (Toggles.highlightTarget and Toggles.highlightTarget.Value and xU == I._target) then
+				return Options.highlightColor.Value;
+			end;
+			return (pm and Options.allyColor.Value or Options.enemyColor.Value);
+		end;
+		return nil;
+	end;
+	function d.Overrides.GetTeam(zl)
+		if zl.Character then
+			return zl.Character.Parent;
+		end;
+		return nil;
+	end;
+end;
+local V = F:CreateWindow({
+	Title = 'Lua.cc |Sub To Halal Gaming',
+	Center = true,
+	AutoShow = true
+});
+local a = {
+	Aiming = V:AddTab('Rage'),
+	otha = V:AddTab('Player')
+};
+local c = a.Aiming:AddRightGroupbox("Aimbot");
+local D = a.otha:AddLeftGroupbox('Anti Lock');
+local W = a.otha:AddRightGroupbox('CFrame');
+local t = a.otha:AddRightGroupbox('Wrist');
+local G = a.otha:AddLeftGroupbox('Misc');
+local K = a.otha:AddRightGroupbox('Spinbot');
+getgenv().Aiming = {
+	Target = {
+		Enabled = false,
+		Prediction = 0.1337,
+		AirshotFunc = false,
+		Part = "HumanoidRootPart",
+		AirshotPart = "RightFoot",
+		Key = "q",
+		Notifications = false,
+		Toggle = false,
+		velcotit = false
+	},
+	TargetExtras = {
+		SpectatePlayer = false,
+		TeleportToPlayer = false
+	}
+};
+H = {
+	Color = Color3.fromRGB(255, 255, 255),
+	Worldc = Color3.fromRGB(242, 3, 255),
+	Brightness1 = 0,
+	Contrast1 = 0,
+	Saturation1 = 0,
+	clr = Color3.fromRGB(255, 0, 0),
+	chm1 = Color3.fromRGB(255, 0, 0),
+	chm2 = Color3.fromRGB(255, 0, 0),
+	ng1 = Color3.fromRGB(255, 255, 255),
+	speed = 5,
+	deesp = 5,
+	chamspeed = 5,
+	highlightspeed = 5,
+	ballspeed = 5,
+	ambiencespeed = 5
+};
+local q = {
+	Typexx = "Library"
+};
+Aimlock = {
+	Key = Enum.KeyCode.C,
+	Hitpart = "Head",
+	Prediction = 10,
+	Enabled = false,
+	Targeting = false,
+	Smoothed = true,
+	SmoothVelocity = 0.092,
+	Airshot = false,
+	Notifffs = false,
+	Notitypes = "Library",
+	VelocityResolver = false
+};
+local y = {
+	Colorthingidkklolllllll = Color3.fromRGB(161, 165, 162),
+	Colorthingidkklolllllll1 = Color3.fromRGB(161, 165, 162),
+	uuuuuuuuuuuuuuuuuuuucolourrrrrrr = 0.82,
+	Raingaybow = false,
+	TracersOptions = "Character",
+	TracersEnabled = false,
+	fakehitcocx = false,
+	fakehitcocx1 = false,
+	fakehitsize = 70,
+	material = "ForceField",
+	ShowingDot = false,
+	spinbotgangy = false,
+	spinbotangle = 110
+};
+local T = game:GetService('Workspace').CurrentCamera;
+local b = game:GetService("RunService");
+local L = game.Players.LocalPlayer;
+local M = game.Players.LocalPlayer;
+local P = game.Players.LocalPlayer:GetMouse();
+local h = {
+	Camera = workspace.CurrentCamera,
+	BeamPart = Instance.new("Part", workspace)
+};
+getgenv().Show = false;
+local U = {
+	Color = Color3.fromRGB(255, 255, 255)
+};
+_G.Color = Color3.fromRGB(255, 255, 255);
+_G.Size = Vector3.new(15, 15, 15);
+local g = Instance.new("Part", workspace);
+g.Anchored = true;
+g.CanCollide = false;
+g.Parent = workspace;
+g.Shape = Enum.PartType.Ball;
+g.Size = _G.Size;
+g.Transparency = 0.2;
+g.Material = Enum.Material.ForceField;
+local l = T:WorldToViewportPoint(L.Character[getgenv().Aiming.Target.Part].Position + (L.Character.LowerTorso.Velocity * getgenv().Aiming.Target.Prediction / 100));
+local s = Drawing.new("Circle");
+s.Thickness = 2;
+s.NumSides = 350;
+s.Transparency = 1;
+s.Radius = 9.5;
+s.Visible = false;
+s.Filled = true;
+local i = Drawing.new("Line");
+i.Visible = false;
+i.From = Vector2.new(0, 0);
+i.To = Vector2.new(200, 200);
+_G.FUCKYUN = Color3.fromRGB(255, 110, 238);
+i.Color = _G.FUCKYUN;
+local n = {
+	grippos = {
+		enabled = true,
+		key = Enum.KeyCode.X,
+		targeting = false
+	}
+};
+local T = workspace.CurrentCamera;
+local k = game:GetService("Lighting");
+local J = game.Players.LocalPlayer:GetMouse();
+local O = game:GetService("UserInputService");
+local L;
+function getClosestPlayerToCursor()
+	local FK, RK = math.huge, nil;
+	for qM, XM in next, game:GetService("Players"):GetPlayers() do
+		local TM = XM.Character:WaitForChild("BodyEffects")["K.O"].Value ~= true;
+		local LM = XM.Character:FindFirstChild("GRABBING_COINSTRAINT") == nil;
+		if XM ~= game.Players.LocalPlayer then
+			local r8 = XM.Character;
+			if r8 and r8.Humanoid.Health &gt; 1 and TM and LM then
+				local dI, zI = T:WorldToViewportPoint(r8.HumanoidRootPart.Position);
+				if zI then
+					local gh = (Vector2.new(J.X, J.Y) - Vector2.new(dI.X, dI.Y)).Magnitude;
+					if gh &lt; FK then
+						RK = XM;
+						FK = gh;
+					end;
+				end;
+			end;
+		end;
+	end;
+	return RK, FK;
+end;
+game:GetService(&quot;UserInputService&quot;).InputBegan:Connect(function(g3, y3)
+	if g3.KeyCode == n.grippos.key and Toggles.wristposk.Value then
+		n.grippos.targeting = not n.grippos.targeting;
+		if n.grippos.targeting then
+			gcptc2 = getClosestPlayerToCursor();
+			gplr = tostring(gcptc2);
+			spawn(function()
+				if gplr and gcptc2 ~= nil and n.grippos.targeting and n.grippos.enabled == true then
+					local yP = game.Players.LocalPlayer;
+					local FP = yP.Character.RightHand;
+					game:GetService(&quot;RunService&quot;).Heartbeat:Connect(function()
+						if gplr and gcptc2 ~= nil and n.grippos.targeting and n.grippos.enabled == true then
+							FP.CFrame = CFrame.new(game.Players[gplr].Character.Head.Position + Vector3.new(0, n.grippos.height, 0));
+						end;
+					end);
+					if FP:FindFirstChild(&quot;RightWrist&quot;) then
+						FP.RightWrist:Destroy();
+					end;
+					workspace.CurrentCamera.CameraSubject = FP;
+					FP.Transparency = 1;
+				end;
+			end);
+		elseif not n.grippos.targeting then
+			if n.grippos.enabled == true then
+				workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid;
+				local KH = game.Players.LocalPlayer;
+				local MH = KH.Character.RightHand;
+				MH.Transparency = 0;
+				MH.CFrame = CFrame.new(game.Players.LocalPlayer.Character.Head.Position - Vector3.new(0, 10, 0));
+			end;
+		end;
+	end;
+end);
+lolnigga = {
+	NiggaKey = &quot;q&quot;
+};
+P.KeyDown:Connect(function(Lh)
+	if Lh == (getgenv().Aiming.Target.Key) then
+		if getgenv().Aiming.Target.Toggle == true then
+			if getgenv().Aiming.Target.Enabled == true then
+				getgenv().Aiming.Target.Enabled = false;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;StarterGui&quot; then
+					L = FindClosestUser();
+					game.StarterGui:SetCore(&quot;SendNotification&quot;, {
+						Title = &quot;Lua.cc&quot;,
+						Text = &quot;Untargeted&quot;,
+						Icon = &quot;http://www.roblox.com/asset/?id=10038026545&quot;
+					});
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;Library&quot; then
+					F:Notify(&quot;Untargeted&quot;);
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;vKhonshu&quot; then
+					f.prompt(&#039;Lua.cc&#039;, &#039;Untargeted&#039;, 5);
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;dxHook&quot; then
+					m:Notify(&quot;Lua.cc&quot;, &quot;Untargeted&quot;, 0.14);
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;Akali&quot; then
+					p({
+						Description = &quot;Untargeted&quot;,
+						Title = &quot;Lua.cc&quot;,
+						Duration = 5
+					});
+				end;
+				if workspace:FindFirstChild(&quot;xd&quot;) then
+					vvv = workspace.xd;
+					vvv:Destroy();
+				end;
+				if y.ShowingDot == true then
+					s.Visible = false;
+				end;
+				if getgenv().Aiming.TargetExtras.SpectatePlayer == true then
+					workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character;
+				end;
+				while getgenv().Show == true do
+					wait();
+					g.Transparency = 0.50;
+				end;
+				while getgenv().Show == false do
+					wait();
+					g.Transparency = 1;
+				end;
+			else
+				L = FindClosestUser();
+				getgenv().Aiming.Target.Enabled = true;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;StarterGui&quot; then
+					game.StarterGui:SetCore(&quot;SendNotification&quot;, {
+						Title = &quot;Lua.cc&quot;,
+						Text = &quot;Targeting : &quot; .. tostring(L.Character.Humanoid.DisplayName),
+						Icon = &quot;http://www.roblox.com/asset/?id=10038026545&quot;
+					});
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;Library&quot; then
+					F:Notify(&quot;Targeting : &quot; .. tostring(L.Character.Humanoid.DisplayName));
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;Akali&quot; then
+					p({
+						Description = &quot;Targeting : &quot; .. tostring(L.Character.Humanoid.DisplayName),
+						Title = &quot;Lua.cc&quot;,
+						Duration = 5
+					});
+				end;
+				if getgenv().Aiming.Target.velcotit == true then
+					getgenv().Aiming.Target.Prediction = 0;
+				end;
+				if y.fakehitcocx == true then
+					local Nq = Instance.new(&quot;Part&quot;, workspace);
+					Nq.Name = &quot;xd&quot;;
+					Nq.Anchored = true;
+					Nq.CanCollide = false;
+					Nq.Transparency = 0;
+					Nq.Parent = workspace;
+					Nq.Shape = Enum.PartType.Block;
+					Nq.Size = Vector3.new(7, 7, 7);
+					Nq.Material = &quot;ForceField&quot;;
+					Nq.Color = Color3.fromRGB(200, 0, 227);
+					spawn(function()
+						game:GetService(&quot;RunService&quot;).Stepped:Connect(function()
+							Nq.Color = y.Colorthingidkklolllllll1;
+							Nq.Position = L.Character[getgenv().Aiming.Target.Part].Position + (L.Character.LowerTorso.Velocity * getgenv().Aiming.Target.Prediction / 100);
+							Nq.Transparency = y.uuuuuuuuuuuuuuuuuuuucolourrrrrrr;
+							Nq.Size = Vector3.new(y.fakehitsize, y.fakehitsize, y.fakehitsize);
+							Nq.Material = y.material;
+						end);
+					end);
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;vKhonshu&quot; then
+					f.prompt(&#039;Lua.cc&#039;, &#039;Targeting : &#039; .. tostring(L.Character.Humanoid.DisplayName), 5);
+				end;
+				if getgenv().Aiming.Target.Notifications == true and q.Typexx == &quot;dxHook&quot; then
+					m:Notify(&quot;Lua.cc&quot;, &quot;Targeting : &quot; .. tostring(L.Character.Humanoid.DisplayName), 0.14);
+					if getgenv().Aiming.TargetExtras.SpectatePlayer == true then
+						workspace.CurrentCamera.CameraSubject = L.Character;
+					end;
+					if getgenv().Aiming.TargetExtras.TeleportToPlayer == true then
+						M.Character.HumanoidRootPart.CFrame = L.Character.HumanoidRootPart.CFrame;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+function FindClosestUser()
+	local qz;
+	local xz = math.huge;
+	for q1, d1 in pairs(game.Players:GetPlayers()) do
+		if d1 ~= game.Players.LocalPlayer and d1.Character and d1.Character:FindFirstChild(&quot;Humanoid&quot;) and d1.Character.Humanoid.Health ~= 0 and d1.Character:FindFirstChild(&quot;HumanoidRootPart&quot;) then
+			local OJ = T:WorldToViewportPoint(d1.Character.PrimaryPart.Position);
+			local NJ = (Vector2.new(OJ.X, OJ.Y) - Vector2.new(P.X, P.Y)).magnitude;
+			if NJ = 0.3 then
+				rN.Instance[#rN.Instance + 1] = eK;
+			end;
+			if eK.Material == Enum.Material.Glass then
+				rN.Instance[#rN.Instance + 1] = eK;
+			end;
+		end;
+		return #oR == 0;
+	end;
+	return true;
+end;
+local FN = nil;
+local CN = nil;
+local YN = false;
+local oN = nil;
+local zN = (1 / 0);
+function FindClosestUser()
+	local XL;
+	local RL = math.huge;
+	for MR, bR in pairs(game.Players:GetPlayers()) do
+		if bR ~= game.Players.LocalPlayer and bR.Character and bR.Character:FindFirstChild("Humanoid") and bR.Character.Humanoid.Health ~= 0 and bR.Character:FindFirstChild("HumanoidRootPart") then
+			local n9, h9 = T:WorldToViewportPoint(bR.Character.PrimaryPart.Position);
+			if h9 then
+				local NG = (Vector2.new(n9.X, n9.Y) - Vector2.new(P.X, P.Y)).magnitude;
+				if AN.FOVHolder == true then
+					if AN.Radius &gt; NG and NG &lt; RL then
+						if (not AN.Wallcheck or WallCheck(bR.Character.HumanoidRootPart, R.Character.HumanoidRootPart)) then
+							XL = bR;
+							RL = NG;
+						end;
+					end;
+				else
+					if NG  buyer build | v1.1.0");
+F.KeybindFrame.Visible = false;
+N_:AddButton('Unload', function()
+	F:Unload();
+end);
+N_:AddLabel('Menu bind'):AddKeyPicker('MenuKeybind', {
+	Default = 'RightShift',
+	NoUI = true,
+	Text = 'Menu keybind'
+});
+F_:AddToggle("Rainbow", {
+	Text = "Rainbow Accent Color"
+});
+F_:AddToggle("Keybinds", {
+	Text = "Show Keybinds Menu",
+	Default = true
+}):OnChanged(function()
+	F.KeybindFrame.Visible = Toggles.Keybinds.Value;
+end);
+F_:AddToggle("Watermark", {
+	Text = "Show Watermark",
+	Default = true
+}):OnChanged(function()
+	F:SetWatermarkVisibility(Toggles.Watermark.Value);
+end);
+F.ToggleKeybind = Options.MenuKeybind;
+o:SetLibrary(F);
+z:SetLibrary(F);
+z:IgnoreThemeSettings();
+z:SetIgnoreIndexes({
+	'MenuKeybind'
+});
+o:SetFolder('MyScriptHub');
+z:SetFolder('MyScriptHub/specific-game');
+z:BuildConfigSection(a['UI Settings']);
+o:ApplyToTab(a['UI Settings']);
+spawn(function()
+	game:GetService("RunService").Stepped:Connect(function()
+		if y.TracersOptions == "Character" then
+			if L ~= nil and y.TracersEnabled and getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild("LowerTorso") and L.Character.Humanoid.health &gt; 0 then
+				local iM, lM = workspace:FindPartOnRayWithIgnoreList(Ray.new(L.Character[getgenv().Aiming.Target.Part].Position, L.Character[getgenv().Aiming.Target.Part].CFrame.LookVector * 1), {
+					T,
+					L.Character
+				}, false, true, "");
+				local tM, dM = T:WorldToViewportPoint(lM);
+				local rM = T:WorldToViewportPoint(L.Character[getgenv().Aiming.Target.Part].Position + (L.Character.LowerTorso.Velocity * getgenv().Aiming.Target.Prediction / 100));
+				local qM, EM = workspace:FindPartOnRayWithIgnoreList(Ray.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position, game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.LookVector * 1), {
+					T,
+					game.Players.LocalPlayer.Character
+				}, false, true, "");
+				local oM, xM = T:WorldToViewportPoint(lM);
+				local vM = T:WorldToViewportPoint(game.Players.LocalPlayer.Character.LowerTorso.Position + (game.Players.LocalPlayer.Character.LowerTorso.Velocity * 0.007));
+				i.To = Vector2.new(rM.X, rM.Y);
+				i.From = Vector2.new(vM.X, vM.Y);
+				local OM = L.Character.HumanoidRootPart.Position;
+				local SM, VM = T:WorldToScreenPoint(OM);
+				if VM then
+					i.Visible = true;
+				else
+					i.Visible = false;
+				end;
+				if y.Raingaybow == true then
+				else
+					i.Color = _G.FUCKYUN;
+				end;
+			else
+				i.Visible = false;
+			end;
+		elseif y.TracersOptions == "Mouse" then
+			if L ~= nil and y.TracersEnabled and getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild("LowerTorso") and L.Character.Humanoid.health &gt; 0 then
+				idx = 10;
+				local f7, q7 = workspace:FindPartOnRayWithIgnoreList(Ray.new(L.Character[getgenv().Aiming.Target.Part].Position, L.Character[getgenv().Aiming.Target.Part].CFrame.LookVector * idx), {
+					T,
+					L.Character
+				}, false, true, "");
+				local u7, s7 = T:WorldToViewportPoint(q7);
+				local a7 = T:WorldToViewportPoint(L.Character[getgenv().Aiming.Target.Part].Position + (L.Character.LowerTorso.Velocity * getgenv().Aiming.Target.Prediction / 100));
+				i.To = Vector2.new(a7.X, a7.Y);
+				i.From = Vector2.new(game.Players.LocalPlayer:GetMouse().X, game.Players.LocalPlayer:GetMouse().Y + 35);
+				i.Visible = true;
+				if y.Raingaybow == true then
+				else
+					i.Color = _G.FUCKYUN;
+				end;
+			else
+				i.Visible = false;
+			end;
+		end;
+	end);
+end);
+getgenv().xdstrafekey = Enum.KeyCode.Q;
+local C_ = game:GetService('CoreGui');
+O.InputBegan:Connect(function(BM, bM)
+	if (not bM) then
+		if (BM.KeyCode == getgenv().xdstrafekey) then
+			if getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild("LowerTorso") and E_.targetstwafeuwu == true then
+				spawn(function()
+					repeat
+						task.wait();
+						for Lx = 0, 360, E_.speed do
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(L.Character.HumanoidRootPart.Position) * CFrame.Angles(0, math.rad(Lx), 0) * CFrame.new(E_.distance, E_.xposition, R_.zposition);
+							task.wait();
+						end;
+					until L.Character.Humanoid.health &lt; 1 or getgenv().Aiming.Target.Enabled == false or E_.targetstwafeuwu == false;
+				end);
+			end;
+		end;
+	end;
+end);
+game:GetService(&quot;RunService&quot;).Heartbeat:Connect(function()
+	if Toggles.cln.Value then
+		mN.Adornee = R.Character;
+	else
+		mN.Adornee = nil;
+	end;
+	if Toggles.Anti1.Value and S_.LOL == &quot;Underground&quot; then
+		task.wait();
+		local ex = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity;
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(ex.X, r_.vel, ex.Z);
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(ex.X, ex.Y, ex.Z);
+		game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(ex.X, r_.vel, ex.Z);
+		game.Players.LocalPlayer.Character.Humanoid.HipHeight = r_.hip;
+	elseif Toggles.Anti1.Value == false then
+		game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2;
+	end;
+	if Toggles.Speedster.Value then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + -game.Players.LocalPlayer.Character.Humanoid.MoveDirection * v_.Speed;
+	end;
+	if Toggles.CFrameSpeedToggle.Value and S_.cframeoptions == &quot;Blatant&quot; then
+		local Vq = Options.Keypickersanic:GetState();
+		if Vq then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.Humanoid.MoveDirection * S_.CFramespedamout;
+		end;
+	end;
+	if Toggles.CFrameSpeedToggle.Value and S_.cframeoptions == &quot;Legit&quot; then
+		local DT = Options.Keypickersanic:GetState();
+		if DT then
+			local Rs = plr.Character;
+			Rs.HumanoidRootPart.Velocity = Rs.HumanoidRootPart.CFrame.lookVector * 190;
+		end;
+	end;
+	if Toggles.Body.Value then
+		game.Players.LocalPlayer.Character.LeftHand.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightHand.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LeftLowerArm.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightLowerArm.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LeftUpperArm.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightUpperArm.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LeftFoot.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightFoot.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LeftLowerLeg.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightLowerLeg.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.UpperTorso.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LowerTorso.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.LeftUpperLeg.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.RightUpperLeg.Material = &quot;ForceField&quot;;
+		game.Players.LocalPlayer.Character.Head.Material = &quot;ForceField&quot;;
+		R.Character.LeftHand.Color = H.Color;
+		R.Character.RightHand.Color = H.Color;
+		R.Character.LeftLowerArm.Color = H.Color;
+		R.Character.RightLowerArm.Color = H.Color;
+		R.Character.LeftUpperArm.Color = H.Color;
+		R.Character.RightUpperArm.Color = H.Color;
+		R.Character.LeftFoot.Color = H.Color;
+		R.Character.RightFoot.Color = H.Color;
+		R.Character.LeftLowerLeg.Color = H.Color;
+		R.Character.RightLowerLeg.Color = H.Color;
+		R.Character.UpperTorso.Color = H.Color;
+		R.Character.LowerTorso.Color = H.Color;
+		R.Character.LeftUpperLeg.Color = H.Color;
+		R.Character.RightUpperLeg.Color = H.Color;
+		R.Character.Head.Color = H.Color;
+	else
+		game.Players.LocalPlayer.Character.LeftHand.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightHand.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LeftLowerArm.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightLowerArm.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LeftUpperArm.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightUpperArm.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LeftFoot.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightFoot.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LeftLowerLeg.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightLowerLeg.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.UpperTorso.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LowerTorso.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.LeftUpperLeg.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.RightUpperLeg.Material = &quot;Plastic&quot;;
+		game.Players.LocalPlayer.Character.Head.Material = &quot;Plastic&quot;;
+	end;
+	if Toggles.Body.Value and Toggles.raonbiwo.Value then
+		R.Character.LeftHand.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightHand.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LeftLowerArm.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightLowerArm.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LeftUpperArm.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightUpperArm.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LeftFoot.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightFoot.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LeftLowerLeg.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightLowerLeg.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.UpperTorso.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LowerTorso.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.LeftUpperLeg.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.RightUpperLeg.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+		R.Character.Head.Color = Color3.fromHSV(tick() % H.chamspeed / H.chamspeed, 1, 1);
+	end;
+	if Toggles.World.Value then
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.TintColor = H.Worldc;
+	else
+		if Toggles.Rainbowworld.Value then
+			game:GetService(&quot;Lighting&quot;).ColorCorrection.TintColor = Color3.fromHSV(tick() % H.ambiencespeed / H.ambiencespeed, 1, 1);
+		else
+			game:GetService(&quot;Lighting&quot;).ColorCorrection.TintColor = Color3.fromRGB(255, 255, 255);
+		end;
+	end;
+	if Toggles.st1.Value then
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Saturation = H.Saturation1;
+	else
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Saturation = 0;
+	end;
+	if Toggles.st12.Value then
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Contrast = H.Contrast1;
+	else
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Contrast = 0;
+	end;
+	if Toggles.st123.Value then
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Brightness = H.Brightness1;
+	else
+		game:GetService(&quot;Lighting&quot;).ColorCorrection.Brightness = 0;
+	end;
+	if Toggles.Reloads.Value then
+		if game:GetService(&quot;Players&quot;).LocalPlayer.Character:FindFirstChildWhichIsA(&quot;Tool&quot;) then
+			if game:GetService(&quot;Players&quot;).LocalPlayer.Character:FindFirstChildWhichIsA(&quot;Tool&quot;):FindFirstChild(&quot;Ammo&quot;) then
+				if game:GetService(&quot;Players&quot;).LocalPlayer.Character:FindFirstChildWhichIsA(&quot;Tool&quot;):FindFirstChild(&quot;Ammo&quot;).Value &lt;= 0 then
+					game:GetService(&#039;ReplicatedStorage&#039;).MainEvent:FireServer(&quot;Reload&quot;, game:GetService(&quot;Players&quot;).LocalPlayer.Character:FindFirstChildWhichIsA(&quot;Tool&quot;));
+				end;
+			end;
+		end;
+	end;
+	if Toggles.Stomps.Value then
+		if game.Players.LocalPlayer.Character.Humanoid.Health &lt;= 5 then
+			for IE, CE in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if CE:IsA(&quot;BasePart&quot;) then
+					CE:Destroy();
+				end;
+			end;
+		end;
+	end;
+	if Toggles.Slowdownlol.Value then
+		local Nw = game.Players.LocalPlayer;
+		local ww = Nw.Character.BodyEffects.Movement:FindFirstChild(&quot;NoJumping&quot;) or Nw.Character.BodyEffects.Movement:FindFirstChild(&quot;ReduceWalk&quot;) or Nw.Character.BodyEffects.Movement:FindFirstChild(&quot;NoWalkSpeed&quot;);
+		if ww then
+			ww:Destroy();
+		end;
+		if Nw.Character.BodyEffects.Reload.Value == true then
+			Nw.Character.BodyEffects.Reload.Value = false;
+		end;
+	end;
+	if Toggles.AutoStomp.Value then
+		game:GetService(&#039;ReplicatedStorage&#039;).MainEvent:FireServer(&quot;Stomp&quot;);
+		wait(0.2);
+	end;
+end);
+game:GetService(&quot;RunService&quot;).Heartbeat:Connect(function()
+	if getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild(&quot;LowerTorso&quot;) and Toggles.lolxdniggaballs.Value then
+		fN.Adornee = L.Character;
+	else
+		fN.Adornee = nil;
+	end;
+	if getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild(&quot;LowerTorso&quot;) and Toggles.loooool.Value then
+		L.Character.Head.Material = &quot;ForceField&quot;;
+		L.Character.LeftHand.Material = &quot;ForceField&quot;;
+		L.Character.RightHand.Material = &quot;ForceField&quot;;
+		L.Character.LeftLowerArm.Material = &quot;ForceField&quot;;
+		L.Character.RightLowerArm.Material = &quot;ForceField&quot;;
+		L.Character.LeftUpperArm.Material = &quot;ForceField&quot;;
+		L.Character.RightUpperArm.Material = &quot;ForceField&quot;;
+		L.Character.LeftFoot.Material = &quot;ForceField&quot;;
+		L.Character.RightFoot.Material = &quot;ForceField&quot;;
+		L.Character.LeftLowerLeg.Material = &quot;ForceField&quot;;
+		L.Character.RightLowerLeg.Material = &quot;ForceField&quot;;
+		L.Character.UpperTorso.Material = &quot;ForceField&quot;;
+		L.Character.LowerTorso.Material = &quot;ForceField&quot;;
+		L.Character.LeftUpperLeg.Material = &quot;ForceField&quot;;
+		L.Character.RightUpperLeg.Material = &quot;ForceField&quot;;
+	else
+		L.Character.Head.Material = &quot;Plastic&quot;;
+		L.Character.LeftHand.Material = &quot;Plastic&quot;;
+		L.Character.RightHand.Material = &quot;Plastic&quot;;
+		L.Character.LeftLowerArm.Material = &quot;Plastic&quot;;
+		L.Character.RightLowerArm.Material = &quot;Plastic&quot;;
+		L.Character.LeftUpperArm.Material = &quot;Plastic&quot;;
+		L.Character.RightUpperArm.Material = &quot;Plastic&quot;;
+		L.Character.LeftFoot.Material = &quot;Plastic&quot;;
+		L.Character.RightFoot.Material = &quot;Plastic&quot;;
+		L.Character.LeftLowerLeg.Material = &quot;Plastic&quot;;
+		L.Character.RightLowerLeg.Material = &quot;Plastic&quot;;
+		L.Character.UpperTorso.Material = &quot;Plastic&quot;;
+		L.Character.LowerTorso.Material = &quot;Plastic&quot;;
+		L.Character.LeftUpperLeg.Material = &quot;Plastic&quot;;
+		L.Character.RightUpperLeg.Material = &quot;Plastic&quot;;
+	end;
+	if getgenv().Aiming.Target.Enabled and L.Character and L.Character:FindFirstChild(&quot;LowerTorso&quot;) and Toggles.loooool.Value and Toggles.xdlolll.Value then
+		L.Character.LeftHand.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightHand.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LeftLowerArm.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightLowerArm.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LeftUpperArm.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightUpperArm.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LeftFoot.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightFoot.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LeftLowerLeg.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightLowerLeg.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.UpperTorso.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LowerTorso.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.LeftUpperLeg.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.RightUpperLeg.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+		L.Character.Head.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+	end;
+	if Toggles.togglemy2.Value then
+		g.Color = Color3.fromHSV(tick() % H.deesp / H.deesp, 1, 1);
+	end;
+end);
+spawn(function()
+	while task.wait() do
+		if Toggles.un1.Value then
+			while Toggles.un1.Value do
+				local oR = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity;
+				local oR = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity;
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(-2.0, 15, -2.0);
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, oR.Y, oR.Z);
+				task.wait();
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(2, 30, 2);
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, -140.0, oR.Z);
+				game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2.8674;
+				task.wait();
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, 700, oR.Z);
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, -140.0, 140);
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, -2.6969E55, 140);
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oR.X, oR.Y, oR.Z);
+			end;
+		end;
+	end;
+end);
+task.spawn(function()
+	while game:GetService(&quot;RunService&quot;).RenderStepped:Wait() do
+		if Toggles.Rainbow.Value == true then
+			local Ep = V.Holder.Visible and F.Registry or F.HudRegistry;
+			for h1, K1 in next, Ep do
+				for ja, Fa in next, K1.Properties do
+					if Fa == &quot;AccentColor&quot; or Fa == &quot;AccentColorDark&quot; then
+						local In = K1.Instance;
+						local An = In.AbsolutePosition.Y;
+						local en = F:MapValue(An, 0, 1080, 0, 0.3) / 0.45;
+						local bn = Color3.fromHSV((F.CurrentRainbowHue - en) % 1, 0.59, 1);
+						if Fa == &quot;AccentColorDark&quot; then
+							bn = F:GetDarkerColor(bn);
+						end;
+						In[ja] = bn;
+					end;
+				end;
+			end;
+		end;
+	end;
+end);
+Toggles.Rainbow:OnChanged(function()
+	if not Toggles.Rainbow.Value then
+		UpdateTheme();
+	end;
+end);
